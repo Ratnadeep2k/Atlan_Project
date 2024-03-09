@@ -6,7 +6,7 @@ function Model() {
   const [models, setModels] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/models")
+    axios.get("https://model-data.onrender.com/models")
       .then((res) => {
         console.log(res);
         setModels(res.data);
@@ -48,8 +48,45 @@ function Model() {
       })
     }
   };
+  const deleteModel = async (model) => {
+    try {
+      // Check if there are at least three models on the page
+      if (models.length < 3) {
+        console.error('Permission denied. You need at least three models on the page to delete models.');
+        toast.error('Permission denied. You need at least three models on the page to delete models.', {
+          position: 'top-right',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
+        return;
+      }
 
+      // Send a DELETE request to the JSON server
+      await axios.delete(`https://model-data.onrender.com/models/${model.id}`);
 
+      // Update the local state to reflect the deletion
+      setModels((prevModels) => prevModels.filter((m) => m.id !== model.id));
+
+      console.log(`Deleted ${model.title}`);
+      toast.success(`Deleted ${model.title}`, {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
+    } catch (error) {
+      console.error('Error deleting model:', error);
+    }
+  };
 
 
   return (
@@ -74,10 +111,20 @@ function Model() {
             className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-600  focus:outline-none focus:ring-green-300"
           >
             Add to Favorites
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 ml-2" fill="none"  strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M5 9l7 7 7-7"></path>
             </svg>
           </button>
+          <button
+              onClick={() => deleteModel(model)}
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-600  focus:outline-none focus:ring-green-300"
+            >
+              Delete Model
+              <svg className="w-4 h-4 ml-2" fill="none" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M5 9l7 7 7-7"></path>
+              </svg>
+            </button>
+          
           </div>
         </div>
       ))}

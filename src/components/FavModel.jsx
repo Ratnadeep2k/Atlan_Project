@@ -45,7 +45,9 @@ const Favourites = () => {
           ))}
         </div>
       ) : (
-        <p>No favourite models yet.</p>
+        <div className='text-center font-extrabold'>
+        <p>No favourite models</p>
+        </div>
       )}
     </div>
   );

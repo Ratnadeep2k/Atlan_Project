@@ -7,7 +7,7 @@ function Model() {
   const [selectedModel, setSelectedModel] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/models")
+    axios.get("https://model-data.onrender.com/models")
       .then((res) => {
         console.log(res);
         setModels(res.data);

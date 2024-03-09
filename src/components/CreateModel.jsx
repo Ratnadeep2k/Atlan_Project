@@ -41,7 +41,7 @@ const ModelForm = ({ onModelCreated }) => {
         return;
       }
       // Send a POST request to your JSON server
-      const response = await axios.post('http://localhost:8000/models', modelData);
+      const response = await axios.post('https://model-data.onrender.com/models', modelData);
 
       // Trigger a callback to inform the parent component about the new model
       //onModelCreated(response.data);
