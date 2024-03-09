@@ -33,10 +33,10 @@ The page load time was measured using [Lighthouse](https://developers.google.com
 4. Run the application: `npm start`
 
 ## Usage
-This Application is showcasing various models of AI in one page .
-User can Explore Models and Learn about the models
-User can also make a model as his/her favourite 
-User can create their own model
+- This Application is showcasing various models of AI in one page .
+- User can Explore Models and Learn about the models
+- User can also make a model as his/her favourite 
+- User can create their own model
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
