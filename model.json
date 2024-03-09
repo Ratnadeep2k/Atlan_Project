@@ -1,0 +1,46 @@
+{
+  "models": [
+    {
+      "id": "1",
+      "title": "ChatGPT",
+      "likes": 300,
+      "link": "https://chat.openai.com/",
+      "description": "ChatGPT is primarily used for natural language understanding and generation, making it valuable for tasks like content creation, chatbot development, language translation, and more. It can be used for a variety of tasks, and largely depends on how each user chooses to use it."
+    },
+    {
+      "id": "2",
+      "title": "Dall-E",
+      "likes": 200,
+      "link": "https://openai.com/dall-e-2",
+      "description": "DALL. E can generate imagery in multiple styles, including photorealistic imagery, paintings, and emoji. It can manipulate and rearrange objects in its images, and can correctly place design elements in novel compositions without explicit instruction."
+    },
+    {
+      "id": "3",
+      "title": "Bard",
+      "likes": 101,
+      "link": "https://gemini.google.com/app",
+      "description": "Google initially announced Bard, its AI-powered chatbot, on Feb. 6, 2023, with a vague release date. It opened access to Bard on March 21, 2023, inviting users to join a waitlist. On May 10, 2023, Google removed the waitlist and made Bard available in more than 180 countries and territories."
+    },
+    {
+      "id": "4",
+      "title": "IBM Watson",
+      "likes": 20,
+      "link": "https://www.ibm.com/products/watsonx-ai",
+      "description": " IBM Watson is a data analytics processor that uses natural language processing, a technology that analyzes human speech for meaning and syntax. IBM Watson performs analytics on vast repositories of data that it processes to answer human-posed questions, often in a fraction of a second"
+    },
+    {
+      "id": "5",
+      "title": "Scribe",
+      "likes": 22,
+      "link": "https://scribehow.com/",
+      "description": "Scribe, the AI writing assistant, revolutionizes content creation. Its prowess in summarizing articles, crafting reports, and aiding academic writing is unparalleled. This tool empowers journalists, students, and professionals, streamlining research and writing. Scribe excels in tailored tasks, supercharging productivity, although intricate creative writing may demand human touch for precision."
+    },
+    {
+      "id": "6",
+      "title": "AlphaCode",
+      "likes": 202,
+      "link": "https://alphacode.ai/en/",
+      "description": "AlphaCode, a revolutionary coding assistant, leverages generative AI to empower developers. It excels in writing code, bug resolution, and suggesting optimal programming solutions. Developers embrace AlphaCode for hastened workflows, task automation, and language acquisition."
+    }
+  ]
+}
