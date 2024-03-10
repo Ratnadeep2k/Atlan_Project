@@ -9,7 +9,7 @@ The recent surge in interest in AI models and LLMs,The tasked with building an a
 - Styling: Tailwind CSS
 - Additional Packages: react-toastify, Axios (for fetching data)
 - Mock data using Json-server
--Josn-server is set-up useing render .(https://model-data.onrender.com/)
+-Josn-server is set-up useing render .([https://model-data.onrender.com/](https://model-data.onrender.com/models))
 
 ## Page Load Time
 The page load time was measured using [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools.
